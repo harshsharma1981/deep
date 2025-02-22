@@ -32,7 +32,7 @@ const PageProvider: React.FC<PageProviderProps> = ({ children }) => {
   useEffect(() => {
     const fetchPageData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/pages');
+        const response = await fetch('https://deepadmin1.onrender.com//api/pages');
         const data = await response.json();
         setPageData(data.data[0]); // Assuming the first object in data is what we need
       } catch (err) {
