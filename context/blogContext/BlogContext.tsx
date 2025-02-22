@@ -29,7 +29,7 @@ export function BlogContextProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const response = await fetch("http://localhost:1337/api/blogs?populate=*");
+        const response = await fetch("https://deepadmin1.onrender.com/api/blogs?populate=*");
         if (!response.ok) throw new Error("Failed to fetch blogs");
         const data = await response.json();
 
