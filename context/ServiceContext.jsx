@@ -12,8 +12,8 @@ export function ServiceContextProvider({ children }) {
     async function fetchData() {
       try {
         // Fetch Services
-        const servicesRes = await fetch("http://localhost:1337/api/services?populate=*");
-        const categoriesRes = await fetch("http://localhost:1337/api/service-categories");
+        const servicesRes = await fetch("https://deepadmin1.onrender.com/api/services?populate=*");
+        const categoriesRes = await fetch("https://deepadmin1.onrender.com/api/service-categories");
 
         if (!servicesRes.ok || !categoriesRes.ok) throw new Error("Failed to fetch data");
 
