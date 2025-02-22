@@ -5,12 +5,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
+        hostname: 'deepadmin1.onrender.com',
         port: '1337',
         pathname: '/uploads/**', // Adjust based on Strapi image paths
       },
     ],
-    domains: ["images.pexels.com","localhost"], // ✅ Allow Pexels images
+    domains: ["images.pexels.com","deepadmin1.onrender.com"], // ✅ Allow Pexels images
     unoptimized: true, // 👈 Disable optimization (try enabling later)
 
   },  
