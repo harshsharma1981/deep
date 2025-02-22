@@ -36,7 +36,7 @@ export const NavbarProvider = ({ children }: { children: React.ReactNode }) => {
   const [navbar, setNavbar] = useState<NavbarItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/page-setting?populate[Navbar][populate]=*")
+    fetch("https://deepadmin1.onrender.com/api/page-setting?populate[Navbar][populate]=*")
       .then((res) => res.json())
       .then((data: PageSettingResponse) => setNavbar(data.data.Navbar))
       .catch((err) => console.error("Error fetching navbar:", err));
